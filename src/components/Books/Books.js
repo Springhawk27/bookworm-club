@@ -5,7 +5,8 @@ import { faBook } from '@fortawesome/free-solid-svg-icons';
 import './Books.css'
 
 
-const Books = () => {
+const Books = (props) => {
+    const { books } = props;
     return (
         <div >
             <div className='title'>
@@ -15,7 +16,12 @@ const Books = () => {
             </div>
             <p>Select today's books to read</p>
             <div className='books-container'>
-                <Book></Book>
+                {
+                    books.map(book => <Book
+                        key={book.key}
+                        book={book}></Book>
+                    )
+                }
             </div>
         </div >
     );

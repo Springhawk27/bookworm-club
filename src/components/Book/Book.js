@@ -1,18 +1,30 @@
 import React from 'react';
 import './Book.css'
 
-const Book = () => {
+const Book = (props) => {
+    const { name, time, img } = props.book;
+    console.log(props)
     return (
         <div>
-            <h1>Book</h1>
-            <img src="https://i.ibb.co/4ThcXLM/data-science.jpg" alt="data-science" border="0" />
+            {/* <h1>name</h1> */}
+            {/* <img src={img} alt="data-science" border="0" /> */}
+            <div className="card h-100" >
+                <img src={img} className="card-img-top" alt="..." />
+                <div className="card-body">
+                    <h5 className="card-title">{name}</h5>
+                    <p className="card-text">Reading Time: {time} minutes</p>
+                    <a href="" className="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            {/* <h1 className='text-primary'>Book</h1> */}
+            {/* <img src="https://i.ibb.co/4ThcXLM/data-science.jpg" alt="data-science" border="0" />
             <img src="https://i.ibb.co/NL1srHs/javascript.jpg" alt="javascript" border="0" />
             <img src="https://i.ibb.co/RNMmvf1/machine-learning.jpg" alt="machine-learning" border="0" />
             <img src="https://i.ibb.co/d0r93JP/python.jpg" alt="python" border="0" />
             <img src="https://i.ibb.co/nM0j31R/react.jpg" alt="react" border="0" />
             <img src="https://i.ibb.co/CV39nJY/deep-learning.jpg" alt="deep-learning" border="0" />
 
-            <img src="https://i.ibb.co/wy9NsZr/statistics.jpg" alt="statistics" border="0" />
+            <img src="https://i.ibb.co/wy9NsZr/statistics.jpg" alt="statistics" border="0" /> */}
         </div>
     );
 };
