@@ -2,3 +2,15 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
+
+.title {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: orange;
+
+}
+
+.book-icon {
+    height: 44px;
+}

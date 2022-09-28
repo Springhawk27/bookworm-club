@@ -3,7 +3,7 @@ import './RightMenu.css'
 
 const RightMenu = () => {
     return (
-        <div>
+        <div className='right-menu-container'>
             <h1>Right Menu</h1>
         </div>
     );

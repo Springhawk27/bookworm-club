@@ -1,0 +1,44 @@
+[
+    {
+        "key": "a1b2c3d4e1",
+        "name": "Data Science from Scratch",
+        "time": 40,
+        "img": "https://i.ibb.co/4ThcXLM/data-science.jpg"
+    },
+    {
+        "key": "a1b2c3d4e2",
+        "name": "Eloquent Javascript",
+        "time": 35,
+        "img": "https://i.ibb.co/NL1srHs/javascript.jpg"
+    },
+    {
+        "key": "a1b2c3d4e3",
+        "name": "Hands-on Machine Learning with Scikit-Learn",
+        "time": 45,
+        "img": "https://i.ibb.co/RNMmvf1/machine-learning.jpg"
+    },
+    {
+        "key": "a1b2c3d4e4",
+        "name": "Python for Beginners",
+        "time": 30,
+        "img": "https://i.ibb.co/d0r93JP/python.jpg"
+    },
+    {
+        "key": "a1b2c3d4e5",
+        "name": "Learning React",
+        "time": 45,
+        "img": "https://i.ibb.co/nM0j31R/react.jpg"
+    },
+    {
+        "key": "a1b2c3d4e6",
+        "name": "Fundamentals of Deep Lerning",
+        "time": 60,
+        "img": "https://i.ibb.co/CV39nJY/deep-learning.jpg"
+    },
+    {
+        "key": "a1b2c3d4e7",
+        "name": "Practical Statistics for Data Scientists",
+        "time": 25,
+        "img": "https://i.ibb.co/wy9NsZr/statistics.jpg"
+    }
+]
