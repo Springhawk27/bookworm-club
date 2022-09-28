@@ -11,7 +11,7 @@ const Books = (props) => {
         <div className='books-container-main'>
             <div className='title'>
                 <FontAwesomeIcon icon={faBook} className='book-icon' />
-                <h1>Book Worm</h1>
+                <h1>Book Worm Club</h1>
 
             </div>
             <p>Select today's books to read</p>
