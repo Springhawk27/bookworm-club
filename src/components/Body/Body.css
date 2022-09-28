@@ -2,6 +2,6 @@
 .body-container {
     display: grid;
     grid-template-columns: 3fr 1fr;
-    width: 90%;
+    /* width: 90%; */
     margin: 0 auto;
 }

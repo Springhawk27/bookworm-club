@@ -1,4 +1,8 @@
 .right-menu-container {
     height: 100vh;
     background-color: antiquewhite;
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding: 10px 20px;
 }

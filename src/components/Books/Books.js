@@ -8,7 +8,7 @@ import './Books.css'
 const Books = (props) => {
     const { books } = props;
     return (
-        <div >
+        <div className='books-container-main'>
             <div className='title'>
                 <FontAwesomeIcon icon={faBook} className='book-icon' />
                 <h1>Book Worm</h1>
