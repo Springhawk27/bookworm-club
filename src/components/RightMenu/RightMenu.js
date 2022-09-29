@@ -3,7 +3,17 @@ import './RightMenu.css'
 import user from '../../images/user.jpg'
 import toast, { Toaster } from 'react-hot-toast';
 
-const notify = () => toast('congratulations you have completed your activity');
+const notify = () => toast.success('congratulations you have completed your activity', {
+    style: {
+        border: '1px solid orange',
+        padding: '16px',
+        color: '#713200',
+    },
+    iconTheme: {
+        primary: 'green',
+        secondary: '#FFFAEE',
+    },
+});
 
 
 const RightMenu = ({ cart }) => {
