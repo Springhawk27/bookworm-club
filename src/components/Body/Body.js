@@ -51,7 +51,6 @@ const Body = () => {
             newCart = [...rest, exists];
         }
 
-        // const newCart = [...cart, selectedBook];
         setCart(newCart);
         addToDb(selectedBook.key)
     }

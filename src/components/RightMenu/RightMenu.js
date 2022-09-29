@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './RightMenu.css'
 import user from '../../images/user.jpg'
 
 const RightMenu = ({ cart }) => {
-    console.log('cart', cart)
+    const [bTime, setBTime] = useState([]);
 
     let total = 0;
     let quantity = 0;
@@ -12,6 +12,35 @@ const RightMenu = ({ cart }) => {
         total = total + (book.time * book.quantity);
 
     }
+
+
+    const handleAddBreak = (id, time) => {
+        let breakTime = {};
+
+        const timeExist = breakTime[id]
+        if (!timeExist) {
+            breakTime[id] = time
+        }
+        localStorage.setItem('break-time', JSON.stringify(breakTime))
+        setBTime(breakTime)
+
+    }
+
+    const getBreakTime = () => {
+        let breakTime = {};
+
+        //get the  cart from local storage
+        const storedBreakTime = localStorage.getItem('break-time');
+        if (storedBreakTime) {
+            breakTime = JSON.parse(storedBreakTime);
+        }
+        return breakTime;
+    }
+    const storedBreakTime = getBreakTime()
+
+
+
+
 
     return (
         <div className='right-menu-container'>
@@ -42,17 +71,17 @@ const RightMenu = ({ cart }) => {
                 <h3 className='title-text'>Add A Break</h3>
                 <div className='break-details'>
                     <div>
-                        <button type="button" className="btn btn-outline-dark button-break">05m</button>
+                        <button onClick={() => handleAddBreak('time', 5)} type="button" className="btn btn-outline-dark button-break" >05m</button>
                     </div>
                     <div>
-                        <button type="button" className="btn btn-outline-dark button-break">10m</button>
+                        <button onClick={() => handleAddBreak('time', 10)} type="button" className="btn btn-outline-dark button-break">10m</button>
                     </div>
                     <div>
-                        <button type="button" className="btn btn-outline-dark button-break">20m</button>
+                        <button onClick={() => handleAddBreak('time', 20)} type="button" className="btn btn-outline-dark button-break">20m</button>
                     </div>
 
                     <div>
-                        <button type="button" className="btn btn-outline-dark button-break">30m</button>
+                        <button onClick={() => handleAddBreak('time', 30)} type="button" className="btn btn-outline-dark button-break">30m</button>
 
                     </div>
                 </div>
@@ -74,7 +103,7 @@ const RightMenu = ({ cart }) => {
                         <h3 className='title-text2'>Break Time</h3>
                     </div>
                     <div>
-                        <p className='small-text2'>30m</p>
+                        <p className='small-text2'>{storedBreakTime.time} minutes</p>
 
                     </div>
 

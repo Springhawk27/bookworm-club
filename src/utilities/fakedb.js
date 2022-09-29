@@ -21,14 +21,14 @@ const addToDb = id => {
 }
 
 const getStoredCart = () => {
-    let shoppingCart = {};
+    let bookCart = {};
 
     //get the  cart from local storage
     const storedCart = localStorage.getItem('cart');
     if (storedCart) {
-        shoppingCart = JSON.parse(storedCart);
+        bookCart = JSON.parse(storedCart);
     }
-    return shoppingCart;
+    return bookCart;
 }
 
 const removeFromDb = id => {
