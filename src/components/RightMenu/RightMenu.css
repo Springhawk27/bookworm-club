@@ -69,6 +69,16 @@
     margin: 20px 0;
 }
 
+.reading-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(248, 253, 253);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
 .button-break {
     padding: 5px;
     border-radius: 40%;
