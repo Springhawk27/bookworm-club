@@ -1,9 +1,9 @@
 import React from 'react';
 import './Book.css'
 
-const Book = (props) => {
-    const { name, time, img } = props.book;
-    console.log(props)
+const Book = ({ book, handleAddToCart }) => {
+    const { name, time, img } = book;
+    // console.log(book, handleAddToCart)
     return (
         <div>
             {/* <h1>name</h1> */}
@@ -15,7 +15,7 @@ const Book = (props) => {
                         <h5 className="card-title fs-6">{name}</h5>
                         <p className="card-text fs-6">Reading Time: {time} minutes</p>
                     </div>
-                    <a href="" className="btn btn-warning">Add To List</a>
+                    <button onClick={() => handleAddToCart(book)} className="btn btn-warning">Add To List</button>
                 </div>
             </div>
             {/* <h1 className='text-primary'>Book</h1> */}

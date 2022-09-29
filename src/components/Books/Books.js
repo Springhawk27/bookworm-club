@@ -6,7 +6,7 @@ import './Books.css'
 
 
 const Books = (props) => {
-    const { books } = props;
+    const { books, handleAddToCart } = props;
     return (
         <div className='books-container-main'>
             <div className='title'>
@@ -19,7 +19,9 @@ const Books = (props) => {
                 {
                     books.map(book => <Book
                         key={book.key}
-                        book={book}></Book>
+                        book={book}
+                        handleAddToCart={handleAddToCart}
+                    ></Book>
                     )
                 }
             </div>

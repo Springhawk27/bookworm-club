@@ -2,9 +2,21 @@ import React from 'react';
 import './RightMenu.css'
 import user from '../../images/user.jpg'
 
-const RightMenu = () => {
+const RightMenu = ({ cart }) => {
+    console.log('cart', cart)
+
+    let total = 0;
+    let quantity = 0;
+    for (const book of cart) {
+        quantity = quantity + book.quantity;
+        total = total + (book.time * book.quantity);
+
+    }
+
     return (
         <div className='right-menu-container'>
+            <h3 className='title-text'>{quantity}</h3>
+
             <div className='user'>
                 <img src={user} alt="" className='user-image' />
                 <div className='user-info'>
@@ -22,7 +34,7 @@ const RightMenu = () => {
                     <p className='small-text2'>Read</p>
                 </div>
                 <div>
-                    <h3 className='title-text2'>26 yrs</h3>
+                    <h3 className='title-text2'>26yrs</h3>
                     <p className='small-text2'>Age</p>
                 </div>
             </div>
@@ -52,7 +64,7 @@ const RightMenu = () => {
                         <h3 className='title-text2'>Reading Time</h3>
                     </div>
                     <div>
-                        <p className='small-text2'>200m</p>
+                        <p className='small-text2'>{total} minutes</p>
 
                     </div>
 
@@ -68,7 +80,7 @@ const RightMenu = () => {
 
                 </div>
                 <div >
-                    <button type="button" class="btn btn-warning w-100">Activity Completed</button>
+                    <button type="button" className="btn btn-warning w-100">Activity Completed</button>
                 </div>
             </div>
         </div>
