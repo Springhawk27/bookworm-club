@@ -86,3 +86,11 @@
     border-radius: 40%;
     background-color: white;
 }
+
+@media only screen and (max-width: 600px) {
+    .right-menu-container {
+        position: relative;
+        top: 0;
+    }
+
+}

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './RightMenu.css'
 import user from '../../images/user.jpg'
 import toast, { Toaster } from 'react-hot-toast';

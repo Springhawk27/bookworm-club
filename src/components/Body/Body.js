@@ -57,10 +57,10 @@ const Body = () => {
 
     return (
         <div className='body-container'>
-            <Books books={books}
+            <Books className="first-order" books={books}
                 handleAddToCart={handleAddToCart}
             ></Books>
-            <RightMenu cart={cart} className="first-order"></RightMenu>
+            <RightMenu cart={cart} className="second-order"></RightMenu>
         </div>
     );
 };
