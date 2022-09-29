@@ -1,0 +1,85 @@
+/* style for blogs  */
+
+.blogs {
+    padding-top: 30px;
+}
+
+.blogs-heading {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 20px 0;
+    border-bottom: 1px solid orange;
+
+}
+
+.blogs-heading-text {
+    margin-bottom: 10px;
+}
+
+.blog-posts {
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-card {
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 30px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.card-title {
+    font-size: 18px;
+    padding: 10px 0;
+}
+
+.card-text {
+    font-size: 14px;
+    padding: 5px 0;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+
+
+.author-title {
+    color: orange;
+    font-weight: 6800;
+    font-size: 13px;
+}
+
+.author-date {
+    font-size: 11px;
+    color: darkgray;
+}
+
+.views {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+
+}
+
+.views-icon {
+    color: #9DFFAD;
+}
+
+.views-count {
+    color: darkgray;
+
+}

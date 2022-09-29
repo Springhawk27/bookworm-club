@@ -3,6 +3,7 @@ import Book from '../Book/Book';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBook } from '@fortawesome/free-solid-svg-icons';
 import './Books.css'
+import Blog from '../Blog/Blog';
 
 
 const Books = (props) => {
@@ -25,6 +26,7 @@ const Books = (props) => {
                     )
                 }
             </div>
+            <Blog></Blog>
         </div >
     );
 };

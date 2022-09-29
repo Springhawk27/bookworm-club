@@ -18,6 +18,7 @@ const notify = () => toast.success('congratulations you have completed your acti
 
 const RightMenu = ({ cart }) => {
     const [bTime, setBTime] = useState([]);
+    console.log(bTime)
 
     let total = 0;
     let quantity = 0;
