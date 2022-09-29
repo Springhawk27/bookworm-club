@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import './RightMenu.css'
 import user from '../../images/user.jpg'
+import toast, { Toaster } from 'react-hot-toast';
+
+const notify = () => toast('congratulations you have completed your activity');
+
 
 const RightMenu = ({ cart }) => {
     const [bTime, setBTime] = useState([]);
@@ -38,13 +42,9 @@ const RightMenu = ({ cart }) => {
     }
     const storedBreakTime = getBreakTime()
 
-
-
-
-
     return (
         <div className='right-menu-container'>
-            <h3 className='title-text'>{quantity}</h3>
+            {/* <h3 className='title-text'>{quantity}</h3> */}
 
             <div className='user'>
                 <img src={user} alt="" className='user-image' />
@@ -109,7 +109,10 @@ const RightMenu = ({ cart }) => {
 
                 </div>
                 <div >
-                    <button type="button" className="btn btn-warning w-100">Activity Completed</button>
+                    <button onClick={notify} type="button" className="btn btn-warning w-100">Activity Completed</button>
+
+                    <Toaster position="top-center"
+                        reverseOrder={false} />
                 </div>
             </div>
         </div>
