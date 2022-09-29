@@ -60,7 +60,7 @@ const Body = () => {
             <Books books={books}
                 handleAddToCart={handleAddToCart}
             ></Books>
-            <RightMenu cart={cart}></RightMenu>
+            <RightMenu cart={cart} className="first-order"></RightMenu>
         </div>
     );
 };
